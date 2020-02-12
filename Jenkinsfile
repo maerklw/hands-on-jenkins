@@ -7,7 +7,7 @@ pipeline {
       }
     }
 
-    stage('Test Firefox') {
+    stage('Test') {
       parallel {
         stage('Test Firefox') {
           steps {
@@ -31,7 +31,7 @@ pipeline {
           steps {
             sleep 2
             echo 'noch ein Test'
-            sh 'echo "Hallo Werner"'
+            sh 'echo "Hallo Werner"; exit 1'
           }
         }
 
